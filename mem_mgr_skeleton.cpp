@@ -118,9 +118,14 @@ void summarize(size_t pg_faults, size_t tlb_hits) {
     printf("\n\t\t...done.\n");
 }
 
-void tlb_add(int index, page_node entry) { }  // TODO
+void tlb_add(int index, page_node entry) { 
+    tlb[index] = entry;
+}  // TODO
 
-void tlb_remove(int index) { }  // TODO
+void tlb_remove(int index) { 
+    tlb[index].npage = (unsigned int) - 1;
+    tlb[index].is_present = false;
+}  // TODO
 
 void tlb_hit(size_t& frame, size_t& page, size_t& tlb_hits, int result) {  }  // TODO
 
