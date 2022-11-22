@@ -12,7 +12,7 @@
 #define ARGC_ERROR 1
 #define FILE_ERROR 2
 
-#define FRAME_SIZE  256
+#define FRAME_SIZE  128 //used to be 256
 #define FIFO 0
 #define LRU 1
 #define REPLACE_POLICY FIFO
